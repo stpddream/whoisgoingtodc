@@ -1,0 +1,1175 @@
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140125000850)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140125000850"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140125000850')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "carrie@prosacco.net"], ["name", "Oswald Dicki"], ["password_digest", "$2a$10$cYm7jgRPXHTmK6P6zm1rwecTWdNxGGTnVXEEn5CkbT5d41ovXogZq"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "jayda@jakubowski.net"], ["name", "Regan Bradtke"], ["password_digest", "$2a$10$g7cXvUQPOYjEMAM3Lf8tjOL8IRajlbj0CHV6KMacTmER.kI1YhWui"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "helen@bernhard.name"], ["name", "Kara Ebert II"], ["password_digest", "$2a$10$RWqbShaU7N0Iit0Mit21yO/h73vObtkWwxOEsiZyPKpeO9lDILJzG"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "sylvester_orn@waters.name"], ["name", "Miss Arjun Thompson"], ["password_digest", "$2a$10$eOchVxGzkxmK7mOj9ln/uuCPERxv9CJJM7XyRSexVqJ0Q354KCdCW"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "phyllis_grimes@ortizjohns.name"], ["name", "Beverly McCullough"], ["password_digest", "$2a$10$vrLBjax5DpQsplIWvzYiAOCGFrJY8iyrY7VlONeOKlGQQbJB87J9a"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "ayla@beattyjohnston.biz"], ["name", "Margarete Kessler"], ["password_digest", "$2a$10$ElbrssZSlAKEn8WU64OMn.8ysxEZ0a.I9yAoeT.p7L2rbh4kZ73hW"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "tamara_mayert@goldnerfeeney.info"], ["name", "Edd Rohan"], ["password_digest", "$2a$10$l0WKpgP78bz/.8r/yetxw.zWL6dCoR7hxvBKdzUAP6zwcHJ9/y1NW"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "mitchell.heller@hyatt.biz"], ["name", "Virgie Dicki"], ["password_digest", "$2a$10$B7kZaKIWKZJ7fnIx7jWUiex1AxBuWu2oe.La9WS2o/Bx1YzfhZBeq"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00], ["email", "donald_predovic@nienow.org"], ["name", "Judge Erdman"], ["password_digest", "$2a$10$ZK2fXNuZYdObh4ztwHuE8uZyjZ2ys.cWdzAUo3knaIQEcoqxaCkdi"], ["updated_at", Sat, 25 Jan 2014 00:41:08 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "darrin@mcglynn.com"], ["name", "Alice Rogahn"], ["password_digest", "$2a$10$E1eEgCDkgq/1SjsvHdLCYOHviWKAAiMsr2nC0FMaTCcUlqreeC2cq"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "abe@okeefewuckert.biz"], ["name", "Ms. Steve Bauch"], ["password_digest", "$2a$10$YsjvALAEsVXERhtNgszEt.Hy09Qj7Gv1HbmHqQvsksWkHxz5P029O"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "chelsea.pouros@mraz.org"], ["name", "Dylan Toy DDS"], ["password_digest", "$2a$10$R/WTmLFyuex60wR7R0CPQuj07XnhqSEXTHAnFyzAGtg9/Mei7diRS"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "ulices.klocko@schmidt.org"], ["name", "Dr. Cielo Morar"], ["password_digest", "$2a$10$ypZk8OmjPT.t0jPPCU3VTu4cHDcTs.7ZzQwD1v5I1ljzVDV6o0VyG"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "tomas_howell@aufderhartorp.biz"], ["name", "Harold Cormier I"], ["password_digest", "$2a$10$VRjwtTcTPsWzPE5np4V.9O75O3N.T7knpgz2udsmiY0S5JQDaVSMK"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "pete.padberg@waelchi.name"], ["name", "Miss Spencer Heaney"], ["password_digest", "$2a$10$td..ZCRdBTUIwHQ49PxVbeC0iacHVdRe10KnI/4gu9jz2wGeu2aLO"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "broderick.christiansen@prosacco.com"], ["name", "Kimberly Bartell"], ["password_digest", "$2a$10$N6YUteRxf4WrRwCdUYNZkuaNlEFP53IJq9ZIkya5uHKlP7.AuRgee"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "marisa_lindgren@ondricka.name"], ["name", "Mr. Kari Fahey"], ["password_digest", "$2a$10$KRiNzMfEgQsB6xOljhn1I.AbzgREKs30fNVRNftuGnSiWzE4mEGiy"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "serena@schaefer.biz"], ["name", "Dr. Tara Kessler"], ["password_digest", "$2a$10$KDfbd3YwRcjDbtcS5j/1puQegXF7SFPYSU4DqT6g/lFt6hoPuOfYm"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "meghan@bergnaum.name"], ["name", "Dr. Sister O'Kon"], ["password_digest", "$2a$10$2rJ9zxV6uTr9BtZVGQQf5uTEpgYd0Wf37b9HQPn3OSjpw7sTY6xLu"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "abigale@gottliebaltenwerth.net"], ["name", "Guillermo Schaefer"], ["password_digest", "$2a$10$JUu36UBQc7Qkhn6PHMArZ.s5Inexy2B6JO9G0XVR2Jm5zODQJVbHm"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "johann@welch.com"], ["name", "Mr. Dario Herman"], ["password_digest", "$2a$10$bx0t0rKFvHpmkCYiNgQhzuhKS2ddWvYTtZB9YufscD3SAcjEW3t9."], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "lonnie@kuhlman.biz"], ["name", "Sydni O'Hara"], ["password_digest", "$2a$10$CxCqdW6CZegRdf6y79537ecFWKN7bsHB2Og66w9GEnRsJAOxMJEku"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "keagan_legros@klocko.info"], ["name", "Harley Lind"], ["password_digest", "$2a$10$9CnnRckWcrFkQSZWKO4Sge/FE2nb0jJHjSCqaYonwpIawj5HnoLmy"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00], ["email", "danielle@sipes.biz"], ["name", "Estefania Klein DDS"], ["password_digest", "$2a$10$wvSo6NaOfeD7WATN2/IXYuZtJFJ7onXkv/7eZolm/dIkPF6pKp8ai"], ["updated_at", Sat, 25 Jan 2014 00:41:09 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "laverna@veum.net"], ["name", "Nathan Johnson"], ["password_digest", "$2a$10$xJxvRmWsquBFO2YQPokvKOtSGLSzj5MEdgd2K5AByKx8heQxSm2He"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "elinor@mosciski.com"], ["name", "Elwyn Strosin"], ["password_digest", "$2a$10$FBryq27JXVjYMt.azsa8TOvgeJcycS/CSCmGewYANB.WJd/mugb6e"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "colten_quitzon@reilly.org"], ["name", "Alec Bradtke"], ["password_digest", "$2a$10$H.Jl2/nsCzSf77OBOM4RLu5TMbrQmElOTR.9qwjdmCXORhspeh0tC"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "caie_schultz@hyatt.com"], ["name", "Christop Mante"], ["password_digest", "$2a$10$xG6TycvfcVy3AcsUcSNoqOzCqlNt4teLghUWGgCTs/owP9kgQnmmG"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "thalia.runolfon@hillsreinger.name"], ["name", "Loyce Tromp DVM"], ["password_digest", "$2a$10$Qqp0nzQgZTjhehySpGTihOZ39yxyrSYAyIVgUPwsRaiSxUxIoabAS"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "delfina.legros@murazikheidenreich.name"], ["name", "Brett Cormier"], ["password_digest", "$2a$10$PB309ITTbh17.hIaGFd.uuk2egyg/aaWMmBaBb5qI6ZoRaoeKgAKK"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "emma.considine@faheysipes.biz"], ["name", "Paris Okuneva"], ["password_digest", "$2a$10$6cD7TJ9zAJX0iR.NnhJ4Au8HuNSLwcJvM3pk7HEAC4rJFWg2ER9K."], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "patience@hirtheheller.net"], ["name", "Landen Lakin"], ["password_digest", "$2a$10$Q/uMZO.GgoLeNdasHvZxiussx78elkHQLjs5PeaVWwOXqNL0uEoxu"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "rudy@mcclurekerluke.biz"], ["name", "Ms. Lora Schmidt"], ["password_digest", "$2a$10$Gnqx4n5vF/qPq/Uzgcd2/.zAJ6nxaDGH7q8Vr9p81Cg7EhD.yOTSS"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "peyton@gutmann.biz"], ["name", "Ethan Murray"], ["password_digest", "$2a$10$olm8RorXXqe5Gui2CfWMoeB7KH3dcbj8or6Zz.evfHWiJzXvLewIW"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "wilbert@walterkub.name"], ["name", "Nathan Mraz"], ["password_digest", "$2a$10$xZ9VTWnzuJbVJhcjwtA1auTTz/jVb0mVnpizpVwKqb4E0Ws0NiXba"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "joyce@cronin.name"], ["name", "Mr. Uriah Mitchell"], ["password_digest", "$2a$10$soI41sNu8Cm9gMY6nDLnw.eKfIr2X0Oahrutd/Mj6z2p.43JOTfAe"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "pietro@bailey.info"], ["name", "Manuel Stokes"], ["password_digest", "$2a$10$qnYP/34T82ZEYWtGuSEXfuzd9kwJLQTw.s5sNoUeOa/JXeeFXhczi"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "jeanie_graham@jast.info"], ["name", "Amparo Ratke"], ["password_digest", "$2a$10$pb4lX7oDOvaIYL5kCFy73eKXl1DUMFdCor6lnBukxJLqSUR/ljWly"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "zack_grady@okon.net"], ["name", "Electa Goldner"], ["password_digest", "$2a$10$4r7mRjhJWegQZ6d6qvT1y.HpoTso/sX/TnBO27aRthuE9u27iIFS2"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00], ["email", "johnson.little@runte.com"], ["name", "John Barrows"], ["password_digest", "$2a$10$/IU3nKGc5Py68VbBos1CHuaU4s.4.oWM0LuTacINkpg7DrR8E0Wi2"], ["updated_at", Sat, 25 Jan 2014 00:41:10 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "jeremie.johnson@hegmann.net"], ["name", "Mrs. Roscoe Jakubowski"], ["password_digest", "$2a$10$jmvOLDY1JoSsr.FioHy9eeNcRFBJ0Kv9YcvG03V5GeK1EEEiSKnnC"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "andre@paucek.info"], ["name", "Zena Littel"], ["password_digest", "$2a$10$OnJq029VvFznK3hft0wygOqWAPEYaogcauwgrttzS8KEO6h/icA.m"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "alexandrea@mayer.biz"], ["name", "Orville Bartell I"], ["password_digest", "$2a$10$qHfy7oeZhSAzxoaW3Dazv.TF747igG1gXyQrDKBPfD6mcxNjzg0VC"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "edmund@durganlittle.info"], ["name", "Angelica Buckridge"], ["password_digest", "$2a$10$7yJBPBYbbFqbo2U8Z9kRbuQiAaM5ZkWff.KcSwwNc6AMM9PMk8YX."], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "golden@ullrich.com"], ["name", "Miss Cynthia Wintheiser"], ["password_digest", "$2a$10$7fQxiqEXQmLL4YWRyjPU0.3moKo.Ipl5eepr3wL71VcUSSIpMJ3Vy"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "kattie@wisokyparisian.net"], ["name", "Sister Denesik"], ["password_digest", "$2a$10$pOsBS5/kdVxitgYRr5Ha5uCRVuH48pwkYqIjw7tSFU8XJWKzJu/AS"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "haylee.shanahan@dickens.name"], ["name", "Savanah Torphy"], ["password_digest", "$2a$10$fblR5hQybHK7IjaoeiL8Wek1bwpJGsj7Ra8QJrIQ.2WPOF7DeWLCu"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "eda.konopelski@mitchellbartell.biz"], ["name", "Mark Deckow"], ["password_digest", "$2a$10$JDVChYt04bvhy4KplCdpL.aAE3Bo.iDlurFxTQ0I1eXtBBhc378pO"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "maudie@fadel.net"], ["name", "Coby Dickens III"], ["password_digest", "$2a$10$Y/2j0jgIqtBDqejzrV1jWOmTbHfcd1Dtp1VIxWu31GQhQKJTJAHB."], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00], ["email", "osvaldo_sawayn@schmidtstokes.org"], ["name", "Felix Grady"], ["password_digest", "$2a$10$qM/GezwF3enupE77ToYJ8.v.yO7WWiiZszHVagO2PqMn7OiX6nnem"], ["updated_at", Sat, 25 Jan 2014 00:41:11 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 00:46:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 18ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 00:47:15 +0000
+Processing by UsersController#index as HTML
+ERROR: compiling _app_views_users_index_html_erb___4420395296474285598_37464600 RAISED /home/vagrant/Project/app/views/users/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/vagrant/Project/app/views/users/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end
+Function body:           def _app_views_users_index_html_erb___4420395296474285598_37464600(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "users/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>All users</h1>
+
+<ul class="users">
+';	 users.each do |user| 
+@output_buffer.safe_append='	<li>
+';@output_buffer.safe_append='		'; user.name ;@output_buffer.safe_append='     '; user.email ;@output_buffer.safe_append='
+	</li>
+</ul>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__657454152768423375__process_action__callbacks'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__640084769092448722__call__callbacks'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered users/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (/home/vagrant/Project/app/views/users/index.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/vagrant/Project/app/views/users/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
+    7: 	</li>
+    8: </ul>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__657454152768423375__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__640084769092448722__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 00:47:32 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (3.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined local variable or method `users' for #<#<Class:0x00000004771da8>:0x007ff34c63d340>):
+    1: <h1>All users</h1>
+    2: 
+    3: <ul class="users">
+    4: 	<% users.each do |user| %>
+    5: 	<li>
+    6: 		<% user.name %>     <% user.email %>
+    7: 	</li>
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___4420395296474285598_70341467699120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 00:47:58 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 359ms (Views: 357.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 00:47:59 +0000
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 00:48:39 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:14 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 00:49:20 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 01:47:33 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 162ms (Views: 155.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 01:47:34 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 01:48:27 +0000
+
+ArgumentError (missing :action):
+  config/routes.rb:7:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:50:50 +0000
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:52:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined local variable or method `allbooks_path' for #<#<Class:0x007fc9b86ef440>:0x007fc9b86ee860>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all books", allbooks_path %></p>
+    4: <p><%= link_to "Share my book!", new_book_path %></p>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb__4409262060278737392_12596100'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:53:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x007fdb206ee788>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_11007640'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:54:57 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x00000003d68398>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_32225120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:54:58 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x007fdb20938f48>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_32225120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (18.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:54:58 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x000000025464e0>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_32225120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:54:58 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x00000003ee18f0>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_32225120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:54:59 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x007fdb2096fd40>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_32225120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:54:59 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined local variable or method `allusers_path' for #<#<Class:0x007fdb206ef368>:0x00000002379e78>):
+    1: <h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+    2: <p>Contents are coming up hahahahahah</p>
+    3: <p><%= link_to "View all users", allusers_path %>
+  app/views/static_pages/home.html.erb:3:in `_app_views_static_pages_home_html_erb___1174311831464408947_32225120'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 84ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 01:55:09 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 01:55:10 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 01:56:02 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:56:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (26.1ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (undefined local variable or method `allbooks_path' for #<#<Class:0x007f36706f1eb0>:0x007f36706f12d0>):
+     6:       <nav>
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Books", allbooks_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+  app/views/layouts/_header.html.erb:9:in `_app_views_layouts__header_html_erb__2599280572648323230_69935894454560'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:05 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (6.9ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007f36706f1eb0>:0x000000037e5e20>):
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Users", allusers_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+    13:     
+  app/views/layouts/_header.html.erb:10:in `_app_views_layouts__header_html_erb__2599280572648323230_30117440'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:29 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (25.1ms)
+Completed 500 Internal Server Error in 40ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007f36706f1eb0>:0x007f3660229b68>):
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Users", allusers_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+    13:     
+  app/views/layouts/_header.html.erb:10:in `_app_views_layouts__header_html_erb__2599280572648323230_30117440'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:29 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007f36706f1eb0>:0x0000000395f1e8>):
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Users", allusers_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+    13:     
+  app/views/layouts/_header.html.erb:10:in `_app_views_layouts__header_html_erb__2599280572648323230_30117440'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007f36706f1eb0>:0x007f366023ff58>):
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Users", allusers_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+    13:     
+  app/views/layouts/_header.html.erb:10:in `_app_views_layouts__header_html_erb__2599280572648323230_30117440'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007f36706f1eb0>:0x00000001571650>):
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Users", allusers_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+    13:     
+  app/views/layouts/_header.html.erb:10:in `_app_views_layouts__header_html_erb__2599280572648323230_30117440'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:30 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x007f36706f1eb0>:0x00000003b8d708>):
+     7:         <ul class="nav navbar-nav">
+     8:           <li><%= link_to "Home", '/' %></li>
+     9:           <li><%= link_to "Users", allusers_path %></li>
+    10:           <li><%= link_to "About", about_path %></li>
+    11:         </ul>
+    12:       </nav>
+    13:     
+  app/views/layouts/_header.html.erb:10:in `_app_views_layouts__header_html_erb__2599280572648323230_30117440'
+  app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1837296754693119917_9429060'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 01:57:37 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:58:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1687ms (Views: 1673.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 10.0.2.2 at 2014-01-25 01:58:54 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 01:58:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 01:58:55 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/static_pages.css?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-01-25 01:59:24 +0000
+
+
+Started GET "/users" for 10.0.2.2 at 2014-01-25 01:59:29 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 21.7ms | ActiveRecord: 1.7ms)
