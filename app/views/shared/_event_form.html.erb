@@ -1,0 +1,11 @@
+<%= form_for(@event) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.label :where %><br>
+    <%= f.text_field :where, placeholder: "Dinning Hall..." %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Post", class: "btn btn-large btn-primary"  %>
+  </div>
+<% end %>
+

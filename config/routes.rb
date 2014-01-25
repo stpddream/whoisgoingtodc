@@ -1,8 +1,10 @@
 Whoisgoingtodc::Application.routes.draw do
   
   
+  get "events/new", to: 'events#new', as: 'newevent'
   resources :users
   get "users/new"
+  resources :events
 
   root "static_pages#home"  
   #root to: "static_pages#home"

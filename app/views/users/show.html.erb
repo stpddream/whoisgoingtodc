@@ -1,6 +1,3 @@
 <% provide(@user)%>
-
-<h2><%= @user.name %></h2>
-<ul>
-	<li>email <%= @user.email %></li>	
-</ul>
+<%= render 'users/user_info' %>
+<%= link_to "Create Event", newevent_path %>

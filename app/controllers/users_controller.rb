@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @events = @user.events.all
   end
     
   def index
@@ -20,7 +21,10 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-  
+ 
+  def newevent
+    redirect_to events_path
+  end
   
   
   private  

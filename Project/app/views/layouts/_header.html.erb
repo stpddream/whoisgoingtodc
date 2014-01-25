@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+  
+    <div class="navbar-header">
+      <%= link_to "Whoisgoingtodc", '/', id: "logo", class: "navbar-text" %>
+    </div>
+    
+    <div class="collapse navbar-collapse">          
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", '/' %></li>
+          <li><%= link_to "Users", allusers_path %></li>
+          <li><%= link_to "About", about_path %></li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">	
+        	<% if signed_in? %>
+        	<li><%= link_to @current_user.name, @current_user %></li>
+            <li><%= link_to "Log out", signout_path, method: "delete" %></li>        	    	
+                    
+        	<% else %>	  
+         	        <li><%= link_to "Log in", signin_path %></li>   
+         	        <li><%= link_to "Sign up", signup_path %></li>     	            	          	  
+        	<% end %>
+        </ul> 
+        
+    </div>
+  </nav>
+  
+</header>
+  
