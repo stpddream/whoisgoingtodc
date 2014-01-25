@@ -5,7 +5,7 @@ Whoisgoingtodc::Application.routes.draw do
   get "users/new"
 
   root "static_pages#home"  
-  root to: "static_pages#home"
+  #root to: "static_pages#home"
   
   get '/signin', to: 'sessions#new', as: 'signin'
   get '/signup', to: 'users#new'
