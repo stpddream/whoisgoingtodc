@@ -1,0 +1,3 @@
+<h1>Welcome to Book Gen (Name待定) !!!!!!!!!!</h1>
+<p>Contents are coming up hahahahahah</p>
+<p><%= link_to "View all users", allusers_path %>

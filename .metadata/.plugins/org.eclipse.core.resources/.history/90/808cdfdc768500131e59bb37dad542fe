@@ -1,0 +1,9 @@
+<% provide(@user)%>
+
+<h2><%= @user.name %></h2>
+<ul>
+	<li>email <%= @user.email %></li>	
+	<% if signed_in? %>
+	  <p> hahahahahahahahhahahahha </p>
+	<% end %>
+</ul>

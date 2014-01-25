@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookGen</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'layouts/header' %>
+<%= yield %>
+<p>
+<%= debug(params) if Rails.env.development? %>
+</p>
+</body>
+</html>
