@@ -13,7 +13,7 @@ Whoisgoingtodc::Application.routes.draw do
   
   post '/sessions', to: 'sessions#create', as: 'sessions'
   
-  get 'users', to: 'users#index', as: 'allusers'
+  get 'users', to: 'users#index'
   get 'about', to: 'static_pages#about', as: 'about'
   
   
