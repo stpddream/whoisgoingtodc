@@ -1,12 +1,22 @@
 Whoisgoingtodc::Application.routes.draw do
   
-  get "static_pages/home"
+  
   resources :users
   get "users/new"
   
   root to: "static_pages#home"
+  
+  get '/signin', to: 'sessions#new', as: 'signin'
+  get '/signup', to: 'users#new'
+  delete '/signout', to: 'sessions#destroy', as: 'signout'
+  
+  post '/sessions', to: 'sessions#create', as: 'sessions'
+  
   get 'users', to: 'users#index', as: 'allusers'
   get 'about', to: 'static_pages#about', as: 'about'
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
