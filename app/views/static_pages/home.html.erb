@@ -10,12 +10,12 @@
 </div>
 
 <% else %>
-<div class="center">
-  <div class="leftsection">
+<div class="row">
+  <div class="col-md-4 col-md-offset-1 text-center">
     <h1>Who is going to Dining Center?</h1>
     <p>Worry about no accompanies for dinner? Check out your friends here!</p>
     <p><%= link_to "SIGN UP NOW!", signup_path, class: 'btn btn-large btn-primary' %>
   </div>
-  <div class="rightsection"><%= render 'users/signup' %></div>
+  <div class="col-md-4 col-md-offset-1"><%= render 'users/signup' %></div>
 </div>
 <% end %>

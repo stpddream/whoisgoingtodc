@@ -13,28 +13,19 @@ body {
 }
 
 .center {
-  margin-bottom: 10px;
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: 70%;
+  width: 100%;
   background: #C80000;
 }
 
-.leftsection {
-  float: left;
+.left {
   width: 40%;
-  margin-right: 20px;
   background: #C68686;
 }
 
-.rightsection {
-  margin-left: 20px;
-  float:left;
-  width: 40%;
-  background: #C67777;
+.right {
+    width: 40%;
+    margin-left: 50%;
 }
 
 .centerbox {
