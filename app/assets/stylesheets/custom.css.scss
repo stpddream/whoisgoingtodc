@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 html {
-  overflow-y: scroll;
+
 }
 
 body {
@@ -29,9 +29,13 @@ body {
     margin-left: 50%;
 }
 
+
 .centerbox {
-  
+
+  width: 25%;  
   text-align: left;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 5px;
   padding-left: 100px;
   padding-right: 100px;
@@ -43,6 +47,10 @@ body {
 
 .centerbox h1 {
   text-align: center;
+}
+
+.nav .navbar {
+  float:none;
 }
 
 @mixin box_sizing {
