@@ -1,7 +1,7 @@
 <%= form_tag events_path, method: 'get', role: 'search', remote: true do %>
-   <%= radio_button_tag :who, 'Public', true %>
+   <%= radio_button_tag :who, 'Public' %>
    <%= label_tag 'Public' %>
-   <%= radio_button_tag :who, 'Friends' %>
+   <%= radio_button_tag :who, 'Friends', true %>
    <%= label_tag 'Friends' %>
    <br /> 
    <%= radio_button_tag :dest, 'Haffner'%>
@@ -12,6 +12,6 @@
    <%= label_tag 'Dining Center' %>
    <%= radio_button_tag :dest, 'All', true %>
    <%= label_tag 'All' %>
-   <%= submit_tag 'SEARCH', who: 'Public', dest: 'All', class: 'btn btn-primary btn-lg' %>        
+   <%= submit_tag 'SEARCH', who: 'Public', dest: 'All', class: 'btn btn-primary btn-lg', id: 'update_feed' %>        
 <% end %>
 

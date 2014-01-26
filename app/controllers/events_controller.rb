@@ -34,8 +34,6 @@ class EventsController < ApplicationController
         where = nil         
         if params[:dest] == 'All'
           where = nil                  
-        else if params[:dest] == nil
-          params[:who] = 'Friends'
         else
           where = params[:dest]
         end
@@ -50,7 +48,7 @@ class EventsController < ApplicationController
          else 
              cur_user_friends = current_user.friendeds.all
              feeds = Event.where(id: nil)
-             cur_user_friends.each{|f|
+             cur_user_friends.each{ |f|
                  if where
                      Event.where(user_id: f.id, created_at: 1.hour.ago..Time.now, where: where).each do |event|
                          feeds << event
