@@ -1,4 +1,8 @@
 class StaticPagesController < ApplicationController
+  
+  before_filter :check_for_mobile, :only => [:new, :edit]
+
+  
   def home
     
 	if signed_in?
