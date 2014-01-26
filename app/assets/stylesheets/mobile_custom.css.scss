@@ -4,7 +4,6 @@
 
 .navb {
 	
-	position: relative;
 	width: 100%;
 	background:#DADADA;
 	
@@ -16,13 +15,11 @@
 }
 
 .navheader {
-	left: auto;
-	right: 20px;
-	
+	float: left
 }
 
 .rightbar {
-	right: auto;
+	float: right;
 	margin-right: 10px;
 }
 
