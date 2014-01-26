@@ -10,7 +10,12 @@
 </div>
 
 <% else %>
-<h1>Who is going to DC???</h1>
-<p>This is the home page for the WHO IS GOING TO DC web app</p>
-<p><%= link_to "SIGN UP NOW!", signup_path, class: 'btn btn-large btn-primary' %>
+<div class="center">
+  <div class="leftsection">
+    <h1>Who is going to Dining Center?</h1>
+    <p>Worry about no accompanies for dinner? Check out your friends here!</p>
+    <p><%= link_to "SIGN UP NOW!", signup_path, class: 'btn btn-large btn-primary' %>
+  </div>
+  <div class="rightsection"><%= render 'users/signup' %></div>
+</div>
 <% end %>
