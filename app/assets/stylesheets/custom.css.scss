@@ -112,7 +112,8 @@ footer ul li {
   @extend .error;
 }
 
-input, textarea, select, .uneditable-input {
+
+.centerbox input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
@@ -124,6 +125,10 @@ input, textarea, select, .uneditable-input {
 #submit {
   margin-top: 10px;
   height: 40px;
+}
+
+.content {
+  margin-top: 20px;
 }
 
 
