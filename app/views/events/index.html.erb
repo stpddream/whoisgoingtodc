@@ -1,9 +1,0 @@
-<div class="contentbox transparent" style="padding: 20px 30px 30px 50px; height: auto">
-    <ul class="events">
-        <% @events.each do |e| %>
-            <li>
-                <%= link_to e.user.name, e.user %> was going to <%= e.where %> <%= time_ago_in_words(e.created_at) %> ago.
-            </li>
-        <% end %>
-    </ul>
-</div>
