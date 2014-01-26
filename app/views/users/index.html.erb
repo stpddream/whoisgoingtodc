@@ -1,17 +1,19 @@
-<h1>Search for friends</h1>
-<%= form_tag users_path, method: 'get', class: 'form-inline', role: 'form' do %>
-  <div class="form-group">
-  	<%= text_field_tag :search, params[:search], class: "form-control" %>  
-  </div>
-  <%= submit_tag "Search", name: nil, class: 'btn btn-info'%>
-<% end %>
+<% if signed_in? %> 
+  <h1>Search for friends</h1>
+  <%= form_tag users_path, method: 'get', class: 'form-inline', role: 'form' do %>
+    <div class="form-group">
+	  <%= text_field_tag :search, params[:search], class: "form-control" %>
+    </div>
+    <%= submit_tag "Search", name: nil, class: 'btn btn-info'%>
+  <% end %>
 
-<div class="content">
-<ul class="users">
-	<% @users.each do |user| %>
-	<li>
-		<%= link_to user.name, user %>     <%= user.email %> 
-	</li>
-	<% end %>
-</ul>
-</div>
+  <div class="content">
+	  <ul class="users">
+		  <% @users.each do |user| %>
+		  <li>
+			  <%= link_to user.name, user %>     <%= user.email %>
+		  </li>
+		  <% end %>
+	  </ul>
+  </div>
+<% end %>

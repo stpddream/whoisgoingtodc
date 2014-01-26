@@ -9,7 +9,12 @@ class UsersController < ApplicationController
   end
     
   def index
-    @users = User.search(params[:search])
+    if signed_in?
+      @users = User.search(params[:search])
+    else 
+      redirect_to '/signup'  
+    end
+    
   end
   
   def create
