@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
+  
   def home
+    
     
 	if signed_in?
 		@event = current_user.events.build if signed_in?
@@ -14,5 +16,6 @@ class StaticPagesController < ApplicationController
 	else 
 	  @user = User.new
 	end
+
   end
 end
