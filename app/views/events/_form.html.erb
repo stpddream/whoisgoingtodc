@@ -2,27 +2,27 @@
   <div class = "left">
   <%= f.hidden_field :user_id, :value=>current_user.id %>
     <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-danger btn-lg">
+        <label class="btn btn-danger btn-lg" data-toggle="tooltip" title="Haffner - Bryn Mawr College">
             <%= f.radio_button :where, "Haffner" %>
             <%= label :where_haffner,"Haffner" %>
         </label>
-        <label class="btn btn-success btn-lg">
+        <label class="btn btn-success btn-lg" data-toggle="tooltip" title="Erdman - Bryn Mawr College">
             <%= f.radio_button :where, "Erdman" %>
             <%= label :where_erdman,"Erdman" %>
         </label>
-        <label class="btn btn-warning btn-lg">
-            <%= f.radio_button :where, "Dining Center" %>
-            <%= label :where_dining_center,"Dining Center" %>
+        <label class="btn btn-warning btn-lg" style="text-transform:uppercase" data-toggle="tooltip" title="Dining Center - Haverford College">
+            <%= f.radio_button :where, "HCDC" %>
+            <%= label :where_dining_center,"HCDC" %>
         </label>
-        <label class="btn btn-info btn-lg">
-            <%= f.radio_button :where, "No Preference", checked: true %>
-            <%= label :where_no_preference,"No Preference" %>
+        <label class="btn btn-info btn-lg" data-toggle="tooltip" title="Sharples - Swarthmore College">
+            <%= f.radio_button :where, "Sharples"%>
+            <%= label :where_sharples,"Sharples" %>
         </label>
     </div>
     <div class="checkbox" data-toggle="tooltip" title="By Checking this you will allow strangers to see your post. Otherwise it will only be visible to your friend.">
          <label>
          <%= f.check_box :visibility, {}, true, false %>
-         <%= label :visibility, "I would like my post to be seen by public." %>
+         <h4><%= label :visibility, "I would like my post to be seen by public." %></h4>
         </label>
     </div>
 </div>
