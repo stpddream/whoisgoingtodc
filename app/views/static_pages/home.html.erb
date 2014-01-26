@@ -1,3 +1,16 @@
-<h1>Who is going to DC???</h1>
-<p>Contents are coming up hahahahahah</p>
+<% if signed_in? %>
+<div class = "row">
+	<aside class = "span4">
+		<section> <h1> <%= @current_user.name %> </h1> </section>
+		<section> <%= render 'events/form' %> </section>
+	</aside>
+	<div class = "span8">
+		<%= render 'shared/feed' %>
+	</div>
+</div>
 
+<% else %>
+<h1>Who is going to DC???</h1>
+<p>This is the home page for the WHO IS GOING TO DC web app</p>
+<p><%= link_to "SIGN UP NOW!", signup_path, class: 'btn btn-large btn-primary' %>
+<% end %>

@@ -1,12 +1,17 @@
 Whoisgoingtodc::Application.routes.draw do
   
   
+<<<<<<< HEAD
   get "friends/create"
   get "friends/destroy"
+
+  get "events/new", to: 'events#new', as: 'newevent'
+
   resources :users
   #resources :friends
   
   get "users/new"
+  resources :events
 
   root "static_pages#home"  
   
