@@ -11,8 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140125175308) do
+ActiveRecord::Schema.define(version: 20140126005234) do
+
+  create_table "events", force: true do |t|
+    t.string   "where"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "visibility"
+  end
 
   create_table "friends", force: true do |t|
     t.integer  "friender_id"
@@ -24,15 +31,6 @@ ActiveRecord::Schema.define(version: 20140125175308) do
   add_index "friends", ["friended_id"], name: "index_friends_on_friended_id"
   add_index "friends", ["friender_id", "friended_id"], name: "index_friends_on_friender_id_and_friended_id", unique: true
   add_index "friends", ["friender_id"], name: "index_friends_on_friender_id"
-
-ActiveRecord::Schema.define(version: 20140125180010) do
-
-  create_table "events", force: true do |t|
-    t.string   "where"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "users", force: true do |t|
     t.string   "email"
