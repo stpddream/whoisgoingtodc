@@ -5,7 +5,16 @@ html {
 }
 
 body {
-  padding: 20px
+  padding: 20px;
+  background: url(/assets/bg_img4.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.transparent{
+  background: rgba(245, 245, 245, 0.4);
 }
 
 .center-block {
@@ -14,9 +23,6 @@ body {
 
 .center {
   text-align: center;
-  width: 100%;
-  background: #C80000;
-  
 }
 
 .left {
@@ -32,12 +38,12 @@ body {
 .centerbox {
   
   text-align: left;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-left: 100px;
   padding-right: 100px;
   padding-bottom: 30px;
-  background:#E0E0E0;
-  margin-top: 20px;
+  background: rgba(245, 245, 245, 0.7);
+  margin-top: 40px;
   
 }
 
