@@ -4,6 +4,10 @@
     <%= f.label :where %><br>
     <%= f.select :where, options_for_select(["No Preference", "Haffner", "Erdman", "Dining Center"]), :class => 'genForm_dropBox' %>
   </div>
+   <div class="field">
+    <%= f.label "Visible by Public"%>
+    <%= f.check_box :visibility, {}, true, false %> 
+  </div> 
   <div class="actions">
     <%= f.submit %>
   </div>

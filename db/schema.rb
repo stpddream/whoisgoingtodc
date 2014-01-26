@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140125180010) do
+ActiveRecord::Schema.define(version: 20140126005234) do
 
   create_table "events", force: true do |t|
     t.string   "where"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "visibility"
   end
 
   create_table "friends", force: true do |t|

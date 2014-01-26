@@ -29,7 +29,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:user_id, :where)
+    params.require(:event).permit(:user_id, :where, :visibility)
   end
 
   def correct_user
