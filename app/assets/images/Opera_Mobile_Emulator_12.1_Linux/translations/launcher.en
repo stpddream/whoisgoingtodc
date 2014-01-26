@@ -1,0 +1,49 @@
+S_LANGUAGE English
+S_LANGUAGE_WORD Language
+S_CHANGE_LANGUAGE Change language
+S_CHOOSE_LANGUAGE Choose language
+S_LANGUAGE_KEEP_ASKING Show this dialog again on startup
+S_UNABLE_TO_START_LAUNCHER Unable to start Opera Mobile Emulator Launcher.
+S_UNABLE_TO_READ_CONFIG Unable to read configuration file.
+S_PROFILE Profile
+S_ADD Add
+S_REMOVE Remove
+S_WINDOW_SCALE Window Scale
+S_ARGUMENTS Arguments
+S_FULL_BROWSER_RESET Full browser reset on startup
+S_HELP Help
+S_LAUNCH Launch
+S_ADD_PROFILE Add profile
+S_ENTER_PROFILE_NAME Enter the name for the new profile.
+S_SAVE_SAVE_AS Save/save as ...
+S_ENTER_NEW_PROFILE_NAME Enter a new name for the profile or keep the current one.
+S_SAVE_CHANGES Save changes ?
+S_PROFILE_ALREADY_EXISTS Profile %1 already exists, do you want to replace it?
+S_OK OK
+S_CANCEL Cancel
+S_YES Yes
+S_NO No
+S_REMOVE_PROFILE_QUESTION Are you sure you want to remove this profile?
+S_CONFIRM_REMOVE_PROFILE Confirm Remove Profile
+S_NAME Name
+S_WIDTH Width
+S_HEIGHT Height
+S_ADD_RESOLUTION Add resolution
+S_RESOLUTION_TOO_BIG Resolution bigger than the current screen size!
+S_RESOLUTION_SIZE_QUESTION You are trying to add: %1x%2, but the current screen resolution is: %3x%4. Are you sure ?
+S_PIXEL_DENSITY Pixel Density
+S_ADD_PIXEL_DENSITY Add Pixel Density
+S_FAILED_TO_RESET_BROWSER Failed to perform full browser reset - unable to remove %1.
+S_FAILED_START_EMULATOR Failed to start Opera Mobile Emulator!
+S_EMULATOR_WARNING Opera Mobile Emulator Launcher Warning.
+S_CONFIG_OUT_OF_DATE_REPLACE Your Launcher.ini configuration file is out of date and will not be used. It has been renamed to %1 to make place for a new configuration file.
+S_CONFIG_OUT_OF_DATE_INFO Config file is out of date.
+S_DEFAULT Default
+S_OPTION_STILL_USED_BY_PROFILES The following profiles use this option, are you sure you want to continue?
+S_CONFIRM_REMOVE Confirm remove
+S_WINDOW_SIZE_WILL_BE_LIMITED Window size will be limited by the available screen resolution.
+S_RESOLUTION Resolution
+S_INPUT User Interface
+S_USER_AGENT_STRING User Agent String
+S_WINDOW_SCALE_TOO_LOW Requested window size is less than the minimum allowed.
+S_SELECT_HIGHER_SCALE Please select a scale level higher than %1.

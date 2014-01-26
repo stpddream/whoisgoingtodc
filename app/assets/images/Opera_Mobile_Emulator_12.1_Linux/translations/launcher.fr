@@ -1,0 +1,49 @@
+S_LANGUAGE Français
+S_LANGUAGE_WORD Langue
+S_CHANGE_LANGUAGE Changer la langue
+S_CHOOSE_LANGUAGE Choisir la langue
+S_LANGUAGE_KEEP_ASKING Afficher de nouveau ce dialogue au démarrage
+S_UNABLE_TO_START_LAUNCHER Impossible de démarrer le lanceur de l'émulateur Opera Mobile
+S_UNABLE_TO_READ_CONFIG Impossible de lire le fichier de configuration Launcher.ini
+S_PROFILE Profil
+S_ADD Ajouter
+S_REMOVE Supprimer
+S_WINDOW_SCALE Échelle de la fenêtre
+S_ARGUMENTS Arguments
+S_FULL_BROWSER_RESET Réinitialisation complète du navigateur au démarrage
+S_HELP Aide
+S_LAUNCH Lancer
+S_ADD_PROFILE Ajouter un profil
+S_ENTER_PROFILE_NAME Entrer un nom pour le nouveau profil.
+S_SAVE_SAVE_AS Enregistrer/Enregistrer sous
+S_ENTER_NEW_PROFILE_NAME Entrer un nouveau nom pour le profil, ou bien garder l'existant.
+S_SAVE_CHANGES Enregistrer les changements ?
+S_PROFILE_ALREADY_EXISTS Le profil %1 existe déjà. Voulez-vous le remplacer ?
+S_OK OK
+S_CANCEL Annuler
+S_YES Oui
+S_NO Non
+S_REMOVE_PROFILE_QUESTION Êtes-vous sûr de vouloir supprimer ce profil ?
+S_CONFIRM_REMOVE_PROFILE Supprimer le profil
+S_NAME Nom
+S_WIDTH Largeur
+S_HEIGHT Hauteur
+S_ADD_RESOLUTION Ajouter une résolution
+S_RESOLUTION_TOO_BIG La résolution est trop importante
+S_RESOLUTION_SIZE_QUESTION Vous avez choisi une résolution de %1x%2, supérieure à la résolution actuelle de l'écran : %3x%4'. Êtes-vous sûr de vouloir continuer ?
+S_PIXEL_DENSITY Densité de pixels
+S_ADD_PIXEL_DENSITY Ajouter une densité de pixels
+S_FAILED_TO_RESET_BROWSER Impossible de réinitialiser complètement le navigateur - impossible de supprimer %1.
+S_FAILED_START_EMULATOR Impossible de démarrer l'émulateur Opera Mobile
+S_EMULATOR_WARNING Avertissement du lanceur de l'émulateur Opera Mobile
+S_CONFIG_OUT_OF_DATE_REPLACE Votre fichier de configuration Launcher.ini est périmé et ne sera pas utilisé. Il a été renommé en %1 pour être distinct du nouveau fichier de configuration.
+S_CONFIG_OUT_OF_DATE_INFO Le fichier de configuration Launcher.ini est périmé
+S_DEFAULT Par défaut
+S_OPTION_STILL_USED_BY_PROFILES Les profils suivants utilisent cette option. Êtes-vous sûr de vouloir continuer ?
+S_CONFIRM_REMOVE Supprimer
+S_WINDOW_SIZE_WILL_BE_LIMITED La taille de la fenêtre sera limitée par la résolution écran actuelle.
+S_RESOLUTION Résolution
+S_INPUT Interface utilisateur
+S_USER_AGENT_STRING Chaine agent utilisateur
+S_WINDOW_SCALE_TOO_LOW La taille demandée pour la fenêtre est inférieure à la taille minimum autorisée.
+S_SELECT_HIGHER_SCALE Veuillez s'il vous plaît choisir l'echelle de la fenetre supérieure à %1.

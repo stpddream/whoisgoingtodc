@@ -1,0 +1,14 @@
+body {margin:0;padding:0 0.5em;font-family:"Trebuchet MS",arial,sans-serif;background-color:#fff;font-size:12px;}
+.red {color:#cc0f16;}
+a {color:#339;}
+ul,li {padding:0;margin-left:0;}
+ul {counter-reset:item;}
+ul ul {margin-left:1.5em;}
+li {display:block;margin-bottom:0.5em;margin-top:0.5em;}
+p, li {color:#495561;}
+h1 {font-weight:normal;clear:both;}
+h2 {font-weight:normal;margin-bottom:.3em;}
+h3 {line-height:1.2em;margin:1.4em 0 .6em;}
+h4 {margin:0;}
+img.right {float:right;clear:right;width:6em;height:6em;}
+.separator {clear:both;}
