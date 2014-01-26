@@ -1,12 +1,26 @@
 <% if signed_in? %>
+
+<ul class="nav nav-tabs">
+  <li><a href="#friends" data-toggle="tab">Friends</a></li>
+  <li><a href="#public" data-toggle="tab">Public</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="friends">
+  	<%= render partial: 'shared/feed', locals: {feed_items: @friend_feed_items } %>  	
+  </div>
+  <div class="tab-pane" id="public">
+  	<%= render partial: 'shared/feed', locals: {feed_items: @public_feed_items } %>  	
+  </div>  
+</div>
+
+
 <div class = "row">
 	<aside class = "span4">
 		<section> <h1> <%= @current_user.name %> </h1> </section>
 		<section> <%= render 'events/form' %> </section>
-	</aside>
-	<div class = "span8">
-		<%= render 'shared/feed' %>
-	</div>
+	</aside>	
 </div>
 
 <% else %>
