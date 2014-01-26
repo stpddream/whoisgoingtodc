@@ -1,14 +1,22 @@
-<%= form_for(@event) do |f| %>
+<%= button_tag "Go!", 
+    controller: "events", action: "create", class: "btn btn-danger btn-lg",
+    event: {user_id: current_user.id, where: "haffner", visibility: "true"}, method: "put" %>
+
+<%= form_for @event, class: "form-inline" do |f| %>
+  
   <%= f.hidden_field :user_id, :value=>current_user.id %>
-  <div class="field">
+  <%= f.submit %>
+  <div class="form-group">  	
     <%= f.label :where %><br>
     <%= f.select :where, options_for_select(["No Preference", "Haffner", "Erdman", "Dining Center"]), :class => 'genForm_dropBox' %>
-  </div>
-   <div class="field">
     <%= f.label "Visible by Public"%>
     <%= f.check_box :visibility, {}, true, false %> 
-  </div> 
+  </div>
   <div class="actions">
-    <%= f.submit %>
   </div>
 <% end %>
+
+
+
+    
+
