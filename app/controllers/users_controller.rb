@@ -4,8 +4,12 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
-    @events = @user.events.all
+    if signed_in?
+      @user = User.find(params[:id])
+      @events = @user.events.all
+    else 
+      redirect_to '/signup'
+    end
   end
     
   def index

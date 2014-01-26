@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 html {
-
+  overflow-y:scroll;
 }
 
 body {
@@ -129,9 +129,10 @@ footer ul li {
 }
 
 #submit {
-  margin-top: 10px;
   height: 40px;
+  margin-top: 15px;
 }
+
 
 .content {
   margin-top: 20px;
