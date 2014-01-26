@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   
-  before_filter :check_for_mobile, :only => [:home]
+  before_filter :check_for_mobile
 
   
   def home
