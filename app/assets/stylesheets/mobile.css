@@ -10,11 +10,5 @@
  *
  *= require_self
  *= require bootstrap
- *= require mobile_custom.css
+ *= require mobile_custom
  */
-
-
-h1 {
-	color: #000000;
-	margin-left: 50px;
-}

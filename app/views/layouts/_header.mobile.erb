@@ -1,15 +1,23 @@
 <header>
-	
-	<nav class="navbar navbar-default nav" role="navigation">
 
-		<div class="navbar-header">
-			<%= link_to root_path, id: "logo" do %>
-			  <%= image_tag "logo.png", size: "151x33" %>
-			<% end %>		
-		</div>		
-	</nav>
+	<div class="navb">
+		
+		<div class="navheader">
+		  <%= link_to root_path, id: "logo" do %>
+			  <%= image_tag "logo.png", size: "151x33", class: "logo" %>
+		  <% end %>
+		</div>
+			
+				
+		<div class="rightbar">
+		  <% if signed_in? %>
+	     	<%= link_to @current_user.name, @current_user%> 
+			<% else %>
+		         <%= link_to "Log in", signin_path %>				
+			<% end %>			
+		</div>
+        
 
-</header>
-
+    </div>
 
 </header>
