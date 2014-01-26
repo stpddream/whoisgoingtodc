@@ -22,8 +22,8 @@ class UsersController < ApplicationController
     end
   end
  
-  def newevent
-    redirect_to events_path
+  def feed
+    Event.where("user_id = ?", id)
   end
   
   
