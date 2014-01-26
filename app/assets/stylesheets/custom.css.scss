@@ -8,10 +8,85 @@ body {
   padding: 20px
 }
 
-.center h1 {
-  margin-bottom: 10px
+.center-block {
+  background: #C82388;
 }
 
+.center {
+  margin-bottom: 10px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 70%;
+  background: #C80000;
+}
+
+.leftsection {
+  float: left;
+  width: 40%;
+  margin-right: 20px;
+  background: #C68686;
+}
+
+.rightsection {
+  margin-left: 20px;
+  float:left;
+  width: 40%;
+  background: #C67777;
+}
+
+.centerbox {
+  
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+  background:#E0E0E0;
+  margin-top: 20px;
+  
+}
+
+.centerbox h1 {
+  text-align: center;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Footer */
+
+footer {
+ 
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999; 
+}
+
+footer small {
+  float: left;
+}
+
+footer a {
+  color: #555;
+}
+
+footer ul {
+  float:right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
 
 
 #logo {
@@ -41,7 +116,14 @@ input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
-  height: auto;
+  height: 30px;
   margin-bottom: 15px;
-  
+  //@include box_sizing;
 }
+
+#submit {
+  margin-top: 10px;
+  height: 40px;
+}
+
+

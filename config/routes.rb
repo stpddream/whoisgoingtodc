@@ -1,7 +1,5 @@
 Whoisgoingtodc::Application.routes.draw do
   
-  
-<<<<<<< HEAD
   get "friends/create"
   get "friends/destroy"
 
