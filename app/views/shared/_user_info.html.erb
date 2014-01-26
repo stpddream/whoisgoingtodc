@@ -1,0 +1,27 @@
+<div class = "userinfo">
+    <section class = "text-center">
+        <h1><%= gravatar_for user %></br>  
+        <%= user.name %></h1>
+        <% if current_user?(user) %>
+            <a class="btn btn-large btn_primary" href="http://gravatar.com/emails">Change profile picture</a>
+        <% else %>
+            <div id="friends_form">
+                <% if current_user.friend?(user) %>
+                    <%= render 'defriend' %>
+                <% else %>
+                    <%= render 'friend' %>
+                <% end %>
+            </div>
+        <% end %>
+    </section>                                           
+    <hr>
+    <section>
+        <h3><%= user.name%>'s Friends</h3>
+        <h4><ul>
+            <% user.friendeds.each do |friend| %>
+            <li><%= link_to friend.name, friend %></li>
+            <% end %>
+        </uli></h4>
+    </section>
+</div>
+

@@ -1,34 +1,22 @@
 <% provide(@user)%>
 
-<h2>
-	<%= gravatar_for @user %>	
-	<%= @user.name %>
-</h2>
-<ul>
-	<% if current_user?(@user) %>
-	  <li><a href="http://gravatar.com/emails">Change your profile picture</a></li>
-	<% end %>
-	<li>Email <%= @user.email %></li>
-	
-	<%if current_user?(@user) %>	
-	  <li>
-		  Friends: 
-		  <ul>
-		    <% @user.friendeds.each do |friend| %>
-		      <li><%= link_to friend.name, friend %></li>
-		    <% end %>
-		  </ul>
-      </li>
-    <% else %>
-      <li>
-      	<div id="friends_form">
-      	  <% if current_user.friend?(@user) %>
-      	     <%= render 'defriend' %>
-      	  <% else %>
-      	     <%= render 'friend' %>      	    
-      	  <% end %>      	
-      	</div>
-      </li>
-    <% end %>
-</ul>
+<div class = "contentbox">
+   <%= render partial:'shared/user_info', locals: {user: @user} %>
+    
+    <div class = "feeds">
+        <h1><%= @user.name%>'s Past Feed</h1>
+        <% if @user.events.any? %>
+            <h4><ul>
+            <% @user.events.each do |e| %>
+                <li>
+                <%= link_to @user.name, @user %> was going to <%= e.where %> <%= time_ago_in_words(e.created_at) %> ago.
+                <% if current_user?(@user) %>
+                    <%= link_to "delete", e, method: :delete, confirm: "you sure?", title: "Delete Post" %>
+                <% end %>
+                </li>
+              <% end %>      
+           </ul></h4>
+        <% end %>
+    </div>
+</div>
 
