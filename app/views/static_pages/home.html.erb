@@ -1,9 +1,11 @@
 
 <% if signed_in? %>
-<div class = "contentbox">
-   <%= render partial: 'shared/user_info', locals: {user: current_user} %>
-       
-<div class = "feeds" style="height: 25%">
+<div class = "leftbar">
+  <div class = "contentbox">
+    <%= render partial: 'shared/user_info', locals: {user: current_user} %>
+  </div>
+</div>
+<div class = "feeds" style="height: 15%">
 
 
    <%= render partial: 'events/form' %>
