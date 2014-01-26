@@ -5,15 +5,17 @@
 	<%= @user.name %>
 </h2>
 <ul>
-	<li><a href="http://gravatar.com/emails">Change your profile picture</a></li>
-	<li>email <%= @user.email %></li>
+	<% if current_user?(@user) %>
+	  <li><a href="http://gravatar.com/emails">Change your profile picture</a></li>
+	<% end %>
+	<li>Email <%= @user.email %></li>
 	
 	<%if current_user?(@user) %>	
 	  <li>
-		  friends 
+		  Friends: 
 		  <ul>
 		    <% @user.friendeds.each do |friend| %>
-		      <li><%= friend.name %></li>
+		      <li><%= link_to friend.name, friend %></li>
 		    <% end %>
 		  </ul>
       </li>
@@ -29,5 +31,4 @@
       </li>
     <% end %>
 </ul>
-<%= link_to "Create Event", newevent_path, class: 'btn btn-large btn-primary' %>
 
