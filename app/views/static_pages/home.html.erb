@@ -9,7 +9,7 @@
    <%= render partial: 'events/form' %>
 </div>
 <div class = "feeds" style="height: 70%; margin-top: 30px">
-
+<!--------------
 <ul class="nav nav-tabs">
 	<li>
 		<a href="#friends" data-toggle="tab">Friends</a>
@@ -29,7 +29,7 @@
              
 </ul>
 
-<!-- Tab panes -->
+ Tab panes
 <div class="tab-content">
 	<div class="tab-pane active" id="friends">
 		<%= render partial: 'shared/feed', locals: {feed_items: @friend_feed_items } %>
@@ -47,7 +47,9 @@
     <div class="tab-pane" id="dc">
         <%= render partial: 'shared/feed', locals: {feed_items: @dc_feed_items } %>
     </div>
+----------->
 
+	<%= render partial: 'shared/search_form' %>
 </div>
 </div>
 
