@@ -1,7 +1,7 @@
-<% if @public_feed_items.any? %>
+<% if feed_items.any? %>
 	<h2> FEED </h2>
 	<ol class = "event">
-		<%= render partial: 'shared/feed_item', collection: @public_feed_items %>
+		<%= render partial: 'shared/feed_item', collection: feed_items %>
 	</ol>
 <% end %>
 
