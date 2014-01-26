@@ -1,10 +1,15 @@
 
 <% if signed_in? %>
-<div>
-	<%= render 'events/form' %>	
+<div class = "contentbox">
+   <%= render partial: 'shared/user_info', locals: {user: current_user} %>
+       
+<div class = "feeds" style="height: 25%">
+
+
+   <%= render partial: 'events/form' %>
 </div>
-
-
+<div class = "feeds" style="height: 70%; margin-top: 30px">
+<!--------------
 <ul class="nav nav-tabs">
 	<li>
 		<a href="#friends" data-toggle="tab">Friends</a>
@@ -12,9 +17,19 @@
 	<li>
 		<a href="#public" data-toggle="tab">Public</a>
 	</li>
+ 	<li>
+		<a href="#Haffner" data-toggle="tab">Haffner</a>
+	</li>
+ 	<li>
+		<a href="#Erdman" data-toggle="tab">Erdman</a>
+	</li>
+ 	<li>
+		<a href="#dc" data-toggle="tab">Dining Center</a>
+	</li>
+             
 </ul>
 
-<!-- Tab panes -->
+ Tab panes
 <div class="tab-content">
 	<div class="tab-pane active" id="friends">
 		<%= render partial: 'shared/feed', locals: {feed_items: @friend_feed_items } %>
@@ -22,9 +37,21 @@
 	<div class="tab-pane" id="public">
 		<%= render partial: 'shared/feed', locals: {feed_items: @public_feed_items } %>
 	</div>
+        
+    <div class="tab-pane" id="Haffner">
+        <%= render partial: 'shared/feed', locals: {feed_items: @haffner_feed_items } %>
+    </div>
+    <div class="tab-pane" id="Erdman">
+        <%= render partial: 'shared/feed', locals: {feed_items: @erdman_feed_items } %>
+    </div>
+    <div class="tab-pane" id="dc">
+        <%= render partial: 'shared/feed', locals: {feed_items: @dc_feed_items } %>
+    </div>
+----------->
+
+	<%= render partial: 'shared/search_form' %>
 </div>
-
-
+</div>
 
 
 <% else %>

@@ -1,0 +1,46 @@
+<div class = "userinfo">
+    <section class = "text-center">
+        <h1><%= gravatar_for user %></br>  
+        <%= user.name %></h1>
+        <% if current_user?(user) %>
+            <a class="btn btn-large btn_primary" href="http://gravatar.com/emails">Change profile picture</a>
+        <% else %>
+            <div id="friends_form">
+                <% if current_user.friend?(user) %>
+                    <%= render 'defriend' %>
+                <% else %>
+                    <%= render 'friend' %>
+                <% end %>
+            </div>
+        <% end %>
+    </section>                                           
+    <hr>
+    <section>
+        <h3><a href="#" data-toggle="tooltipi" title="view all friends"><%= user.name%>'s Friends</a></h3>
+        <table>
+            <tr>
+            <% count = 0%>
+
+            <% if user.friendeds.all.length <= 8%>
+                <% friends = user.friendeds.all %>
+            <% else %>
+                <% friends = user.friendeds.sample(8) %>
+            <% end %>
+                
+            <% friends.each do |friend| %>
+                <td data-toggle="tooltip" title="<%= friend.name%>"><%=link_to friend, id: friend.name do %>
+                    <%= gravatar_image_tag friend.email, alt:friend.name, size: 10 %>
+                <% end %>
+                <% count = count+1 %>
+                <% if count%4 == 0 %>
+                    </td></tr><tr>
+                <% else %>
+                    </td>
+                <% end %> 
+            
+            <% end %>
+            </tr>
+        </table>
+    </section>
+</div>
+

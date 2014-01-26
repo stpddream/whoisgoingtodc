@@ -1,0 +1,17 @@
+<%= form_tag events_path, method: 'get', role: 'search' do %>
+   <%= radio_button_tag :who, 'Public', true %>
+   <%= label_tag 'Public' %>
+   <%= radio_button_tag :who, 'Friends' %>
+   <%= label_tag 'Friends' %>
+   <br /> 
+   <%= radio_button_tag :dest, 'Haffner'%>
+   <%= label_tag 'Haffner' %>
+   <%= radio_button_tag :dest, 'Erdman'%>
+   <%= label_tag 'Erdman' %>
+   <%= radio_button_tag :dest, 'Dining Center'%>
+   <%= label_tag 'Dining Center' %>
+   <%= radio_button_tag :dest, 'All', true %>
+   <%= label_tag 'All' %>
+   <%= submit_tag 'SEARCH', who: 'Public', dest: 'All', class: 'btn btn-primary btn-lg' %>        
+<% end %>
+

@@ -1,22 +1,35 @@
-<%= button_tag "Go!", 
-    controller: "events", action: "create", class: "btn btn-danger btn-lg",
-    event: {user_id: current_user.id, where: "haffner", visibility: "true"}, method: "put" %>
-
 <%= form_for @event, class: "form-inline" do |f| %>
-  
+  <div class = "left">
   <%= f.hidden_field :user_id, :value=>current_user.id %>
-  <%= f.submit %>
-  <div class="form-group">  	
-    <%= f.label :where %><br>
-    <%= f.select :where, options_for_select(["No Preference", "Haffner", "Erdman", "Dining Center"]), :class => 'genForm_dropBox' %>
-    <%= f.label "Visible by Public"%>
-    <%= f.check_box :visibility, {}, true, false %> 
-  </div>
-  <div class="actions">
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-danger btn-lg">
+            <%= f.radio_button :where, "Haffner" %>
+            <%= label :where_haffner,"Haffner" %>
+        </label>
+        <label class="btn btn-success btn-lg">
+            <%= f.radio_button :where, "Erdman" %>
+            <%= label :where_erdman,"Erdman" %>
+        </label>
+        <label class="btn btn-warning btn-lg">
+            <%= f.radio_button :where, "Dining Center" %>
+            <%= label :where_dining_center,"Dining Center" %>
+        </label>
+        <label class="btn btn-info btn-lg">
+            <%= f.radio_button :where, "No Preference", checked: true %>
+            <%= label :where_no_preference,"No Preference" %>
+        </label>
+    </div>
+    <div class="checkbox" data-toggle="tooltip" title="By Checking this you will allow strangers to see your post. Otherwise it will only be visible to your friend.">
+         <label>
+         <%= f.check_box :visibility, {}, true, false %>
+         <%= label :visibility, "I would like my post to be seen by public." %>
+        </label>
+    </div>
+</div>
+  <div class = "right">
+    <button type="submit" class="btn btn-primary btn-lg btn-full">
+        I am going to EAT now!
+    </button>
   </div>
 <% end %>
-
-
-
-    
 

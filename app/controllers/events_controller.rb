@@ -23,9 +23,37 @@ class EventsController < ApplicationController
 
   def destroy
  	@event.destroy
-	redirect_to root_path
+	redirect_to :back
   end
 
+  
+  def index
+    if signed_in?
+        if params[:who] == 'Public'
+            feeds = Event.where(created_at: 1.hour.ago..Time.now, visibility: true).where.not(user_id: current_user)
+        else 
+            cur_user_friends = current_user.friendeds.all
+            feeds = Event.where(id: nil)
+            cur_user_friends.each{|f|
+                Event.where(user_id: f.id, created_at: 1.hour.ago..Time.now).each do |event|
+                feeds << event
+                end
+            }
+        end
+                                                                                            
+        if params[:dest] == 'All'
+            @events = feeds
+        elsif params[:dest] == 'Haffner'
+            @events = feeds.where(where: 'Haffner')
+        elsif params[:dest] == 'Erdman'
+            @events = feeds.where(where: 'Erdman')
+        elsif params[:dest] == 'Dining Center'
+            @events = feeds.where(where: 'Dining Center')
+        end
+    end
+  end
+  
+  
   private
 
   def event_params
