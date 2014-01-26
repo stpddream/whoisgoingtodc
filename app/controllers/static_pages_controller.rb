@@ -13,6 +13,11 @@ class StaticPagesController < ApplicationController
 		    @friend_feed_items << event		    
 		    end 
 		}
+        @erdman_feed_items = @public_feed_items.where(where: "Erdman")
+        @haffner_feed_items = @public_feed_items.where(where: "Haffner")
+        @dc_feed_items = @public_feed_items.where(where: "Dining Center")
+        
+        
 	else 
 	  @user = User.new
 	end

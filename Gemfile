@@ -51,6 +51,7 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+gem 'gravatar_image_tag'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

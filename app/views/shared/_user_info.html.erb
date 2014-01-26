@@ -16,12 +16,31 @@
     </section>                                           
     <hr>
     <section>
-        <h3><%= user.name%>'s Friends</h3>
-        <h4><ul>
-            <% user.friendeds.each do |friend| %>
-            <li><%= link_to friend.name, friend %></li>
+        <h3><a href="#" data-toggle="tooltipi" title="view all friends"><%= user.name%>'s Friends</a></h3>
+        <table>
+            <tr>
+            <% count = 0%>
+
+            <% if user.friendeds.all.length <= 8%>
+                <% friends = user.friendeds.all %>
+            <% else %>
+                <% friends = user.friendeds.sample(8) %>
             <% end %>
-        </uli></h4>
+                
+            <% friends.each do |friend| %>
+                <td data-toggle="tooltip" title="<%= friend.name%>"><%=link_to friend, id: friend.name do %>
+                    <%= gravatar_image_tag friend.email, alt:friend.name, size: 10 %>
+                <% end %>
+                <% count = count+1 %>
+                <% if count%4 == 0 %>
+                    </td></tr><tr>
+                <% else %>
+                    </td>
+                <% end %> 
+            
+            <% end %>
+            </tr>
+        </table>
     </section>
 </div>
 

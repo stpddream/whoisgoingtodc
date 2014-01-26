@@ -17,6 +17,16 @@
 	<li>
 		<a href="#public" data-toggle="tab">Public</a>
 	</li>
+ 	<li>
+		<a href="#Haffner" data-toggle="tab">Haffner</a>
+	</li>
+ 	<li>
+		<a href="#Erdman" data-toggle="tab">Erdman</a>
+	</li>
+ 	<li>
+		<a href="#dc" data-toggle="tab">Dining Center</a>
+	</li>
+             
 </ul>
 
 <!-- Tab panes -->
@@ -27,6 +37,17 @@
 	<div class="tab-pane" id="public">
 		<%= render partial: 'shared/feed', locals: {feed_items: @public_feed_items } %>
 	</div>
+        
+    <div class="tab-pane" id="Haffner">
+        <%= render partial: 'shared/feed', locals: {feed_items: @haffner_feed_items } %>
+    </div>
+    <div class="tab-pane" id="Erdman">
+        <%= render partial: 'shared/feed', locals: {feed_items: @erdman_feed_items } %>
+    </div>
+    <div class="tab-pane" id="dc">
+        <%= render partial: 'shared/feed', locals: {feed_items: @dc_feed_items } %>
+    </div>
+
 </div>
 </div>
 

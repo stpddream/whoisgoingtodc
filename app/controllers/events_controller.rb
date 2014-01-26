@@ -23,7 +23,7 @@ class EventsController < ApplicationController
 
   def destroy
  	@event.destroy
-	redirect_to root_path
+	redirect_to :back
   end
 
   private
