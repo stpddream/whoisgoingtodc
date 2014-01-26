@@ -1,17 +1,22 @@
 Whoisgoingtodc::Application.routes.draw do
   
   
+  get "friends/create"
+  get "friends/destroy"
   resources :users
+  #resources :friends
+  
   get "users/new"
 
   root "static_pages#home"  
-  #root to: "static_pages#home"
   
   get '/signin', to: 'sessions#new', as: 'signin'
   get '/signup', to: 'users#new'
   delete '/signout', to: 'sessions#destroy', as: 'signout'
   
   post '/sessions', to: 'sessions#create', as: 'sessions'
+  post '/friends', to: 'friends#create', as: 'friends'
+  get '/friends/index', to: 'friends#index'
   
   get 'users', to: 'users#index'
   get 'about', to: 'static_pages#about', as: 'about'

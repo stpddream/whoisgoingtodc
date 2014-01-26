@@ -1,6 +1,31 @@
 <% provide(@user)%>
 
-<h2><%= @user.name %></h2>
+<h2>
+	<%= gravatar_for @user %>	
+	<%= @user.name %>
+</h2>
 <ul>
-	<li>email <%= @user.email %></li>	
+	<li><a href="http://gravatar.com/emails">Change your profile picture</a></li>
+	<li>email <%= @user.email %></li>
+	
+	<%if current_user?(@user) %>	
+	  <li>
+		  friends 
+		  <ul>
+		    <% @user.friendeds.each do |friend| %>
+		      <li><%= friend.name %></li>
+		    <% end %>
+		  </ul>
+      </li>
+    <% else %>
+      <li>
+      	<div id="friends_form">
+      	  <% if current_user.friend?(@user) %>
+      	     <%= render 'defriend' %>
+      	  <% else %>
+      	     <%= render 'friend' %>      	    
+      	  <% end %>      	
+      	</div>
+      </li>
+    <% end %>
 </ul>

@@ -13,5 +13,19 @@ namespace :db do
       User.create!(email: email, name: name, password: password, password_confirmation: password)
       
     end
+    
+    User.create!(email: "fxiong@haverford.edu", name: "Panda", password: "111111", password_confirmation: "111111")
+    make_friends
   end
+end
+
+def make_friends
+  panda = User.find_by_email("fxiong@haverford.edu")
+  people = User.all[2..15]
+  people.each { |person| 
+    panda.friend!(person) 
+    puts person.name
+    puts "hahahah"
+  }
+  
 end
