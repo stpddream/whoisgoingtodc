@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     
     if @event.save
 	      flash[:success] = "Event created!"
-        redirect_to 'root_path'
+        redirect_to "/"
     else
         render 'new'
     end

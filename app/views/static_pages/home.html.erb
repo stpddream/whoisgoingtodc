@@ -1,69 +1,64 @@
-
+<div class = "contentbox">
 <% if signed_in? %>
-<div class = "leftbar">
-  <div class = "contentbox">
-    <%= render partial: 'shared/user_info', locals: {user: current_user} %>
-  </div>
-</div>
-<div class = "feeds" style="height: 15%">
+	<%= render partial: 'shared/user_info', locals: {user: current_user} %>
+	<div class = "feeds" style="height: 20%">
+		<%= render partial: 'events/form' %>
+	</div>
+	<div class = "feeds" style="height: 75%; margin-top: 30px">
+		<%= render partial: 'shared/search_form' %>
+		<%= render 'events/feed_result' %>
+	</div>
 
-
-   <%= render partial: 'events/form' %>
-</div>
-<div class = "feeds" style="height: 70%; margin-top: 30px">
 <!--------------
 <ul class="nav nav-tabs">
-	<li>
-		<a href="#friends" data-toggle="tab">Friends</a>
-	</li>
-	<li>
-		<a href="#public" data-toggle="tab">Public</a>
-	</li>
- 	<li>
-		<a href="#Haffner" data-toggle="tab">Haffner</a>
-	</li>
- 	<li>
-		<a href="#Erdman" data-toggle="tab">Erdman</a>
-	</li>
- 	<li>
-		<a href="#dc" data-toggle="tab">Dining Center</a>
-	</li>
-             
+<li>
+<a href="#friends" data-toggle="tab">Friends</a>
+</li>
+<li>
+<a href="#public" data-toggle="tab">Public</a>
+</li>
+<li>
+<a href="#Haffner" data-toggle="tab">Haffner</a>
+</li>
+<li>
+<a href="#Erdman" data-toggle="tab">Erdman</a>
+</li>
+<li>
+<a href="#dc" data-toggle="tab">Dining Center</a>
+</li>
+
 </ul>
 
- Tab panes
+Tab panes
 <div class="tab-content">
-	<div class="tab-pane active" id="friends">
-		<%= render partial: 'shared/feed', locals: {feed_items: @friend_feed_items } %>
-	</div>
-	<div class="tab-pane" id="public">
-		<%= render partial: 'shared/feed', locals: {feed_items: @public_feed_items } %>
-	</div>
-        
-    <div class="tab-pane" id="Haffner">
-        <%= render partial: 'shared/feed', locals: {feed_items: @haffner_feed_items } %>
-    </div>
-    <div class="tab-pane" id="Erdman">
-        <%= render partial: 'shared/feed', locals: {feed_items: @erdman_feed_items } %>
-    </div>
-    <div class="tab-pane" id="dc">
-        <%= render partial: 'shared/feed', locals: {feed_items: @dc_feed_items } %>
-    </div>
+<div class="tab-pane active" id="friends">
+<%= render partial: 'shared/feed', locals: {feed_items: @friend_feed_items } %>
+</div>
+<div class="tab-pane" id="public">
+<%= render partial: 'shared/feed', locals: {feed_items: @public_feed_items } %>
+</div>
+
+<div class="tab-pane" id="Haffner">
+<%= render partial: 'shared/feed', locals: {feed_items: @haffner_feed_items } %>
+</div>
+<div class="tab-pane" id="Erdman">
+<%= render partial: 'shared/feed', locals: {feed_items: @erdman_feed_items } %>
+</div>
+<div class="tab-pane" id="dc">
+<%= render partial: 'shared/feed', locals: {feed_items: @dc_feed_items } %>
+</div>
 ----------->
-
-	<%= render partial: 'shared/search_form' %>
-	<%= render 'events/feed_result' %>
-</div>
-</div>
-
 
 <% else %>
 <div class="row">
 	<div class="col-md-4 col-md-offset-1 text-center">
-	<span style="color:#fff">FOORIEND<span>
-    </div>
+		<span style="color:#fff">FOORIEND<span>
+	</div>
 	<div class="col-md-4 col-md-offset-1">
-		<div class="img-rounded" id="home-right"><%= render 'users/signup' %></div>
+		<div class="img-rounded" id="home-right">
+			<%= render 'users/signup' %>
+		</div>
 	</div>
 </div>
-<% end %>
+</div>
+<% end %>`

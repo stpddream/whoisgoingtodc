@@ -3,11 +3,12 @@
  <ul class="events" style="list-style: none">
           <% @events.each do |e| %>
               <li>
-                  <%= link_to gravatar_image_tag(e.user.email, size: 1), e.user %>
-                  <h4>
-                  <span class="user"><%= link_to e.user.name, e.user %></span> 
-                  <span class="content"> was going to <%= e.where %> <%= time_ago_in_words(e.created_at) %> ago. </span>
-                  <h4>
+              	  <%= gravatar_for e.user, true %>
+               
+                  <div id="haha">
+                    <span class="user"><%= link_to e.user.name, e.user %></span> 
+                    <span class="content"> was going to <%= e.where %> <%= time_ago_in_words(e.created_at) %> ago. </span>
+                  </div>
                   <hr>
               </li>
 
